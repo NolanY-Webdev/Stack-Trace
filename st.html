@@ -7,23 +7,33 @@
 
 
 <body>
+<table>
+   <tr>
+      <td>
+        <textarea id="textStuff" placeholder='text goes here' rows=45 cols=90>
+        </textarea>
+      </td>
+      <td>
+         TEXT YO
+      </td>
+   </tr>
+</table>
 
-<textarea id="textStuff" placeholder='text goes here' rows=45 cols=90>
-</textarea>
 <br>
 <script>
-window.onload = function(){
 
-};
-
-var words = document.getElementById('textStuff').value;
 function save(){
-ll.add(words);
+  var words = document.getElementById('textStuff').value;
+  ll.add(words);
+}
+
+function dump(){
+  ll = linkedListGenerator();
 }
 
 </script>
 <button onclick="save(); console.log(ll.getHead())">Save</button>
-<button onclick="var ll = linkedListGenerator(), console.log(ll.getHead());">Dump</button>
+<button onclick="dump(), console.log(ll.getHead());">Dump</button>
 
 
 </body>
